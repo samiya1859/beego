@@ -68,16 +68,19 @@ nav div:hover .nav-item{
     }
 }
 
-.random-cat-image img {
+#randomCatImageSection img {
     width: 100%;
     height: 100%;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+.footer {
+    display: flex;                    
+    justify-content: space-between;            
+    padding: 10px;                    
+    background-color: #f4f4f4;        
+    width: 100%;                      
 }
+
 .footer div i{
     font-size: 30px;
 }
@@ -132,4 +135,74 @@ nav div:hover .nav-item{
 .thumbs i:hover{
     color: red;
     transform: scale(1.2);
+}
+
+
+
+/* Grid layout (3 columns) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+}
+
+
+/* Scrollable layout */
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    overflow-y: scroll;  
+    scroll-snap-type: y mandatory; 
+}
+
+.scroll-container img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
+    scroll-snap-align: start;
+}
+
+.grid-container img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Additional styling to make the image layout look better */
+.scroll-container img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* CSS for images inside the grid */
+.fav-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fav-image:hover {
+    transform: scale(1.05);
+}
+
+
+#fav-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Auto-adjust columns */
+    gap: 10px;
+    padding: 10px;
+}
+
+#fav-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button{
+    border: none;
 }

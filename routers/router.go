@@ -13,4 +13,5 @@ func init() {
 	// This is for the /cat route
 	web.Router("/", &controllers.CatController{}, "get:GetCatImage")
 	web.Router("/vote", &controllers.CatController{}, "post:Vote")
+	web.Router("/favorites", &controllers.CatController{}, "get:GetFavorites")
 }
